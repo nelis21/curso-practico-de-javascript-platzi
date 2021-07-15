@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Figuras geometricas</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1 class="header__title">
+            Figuras Geométricas
+        </h1>
+        <p class=>Las figuras geométricas son el objeto de estudio de la geometría, rama de las matemáticas que se dedica a analizar las propiedades y medidas de las figuras en el espacio o en el plano. Los cuerpos geométricos se pueden clasificar a su vez en poliedros y cuerpos geométricos redondos o no poliedros</p>
+        <div class="divicion">
+            <section class="divtext">
+                <h2>Perimetro</h2>
+                <p>Es la distancia alrededor de una figura o forma. El área mide el espacio dentro de una figura. Aprende cómo calcular el perímetro y el área de varias figuras.</p>
+            </section>
+           <section class="divtext">
+                <h2>Area</h2>
+                <p>El área es un concepto métrico que puede permitir asignar una medida a la extensión de una superficie, expresada en matemáticas como unidades de medida denominadas unidades de superficie.​ El área es un concepto métrico que requiere la especificación de una medida de longitu</p>
+            </section>
+        </div>
+    </header>
+    <main class="portfolio-list">
+        <section class="Geodiv">
+        <div class="cuadrado">
+        <h2 class="title">Cuadrado</h2>
+        <figure class="figure">
+            <img class="imagen" src="css/icons8-four-squares-64.png">
+        </figure>
+            <form class="inf">
+                <p class="subtitle" >Escribe los datos del cuadrado</p>
+                <div class="input_number">
+                    <label  class="contedor" for="inputCuadrado">
+                        Lado
+                    </label>
+                    <input class="contenedor"  id="inputCuadrado" type="number">
+                </div>
+                <div class="div-button">
+                    <button class="button" type="button" onclick="calcularPerimetroCuadrado()">
+                         Perímetro
+                    </button>
+                    <button class="button" type="button" onclick="calcularAreaCuadrado()">
+                         Area
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="cuadrado">
+        <h2 class="title">Triángulo</h2>
+        <figure >
+            <img class="imagen" src="css/icons8-tres-triángulos-64.png">
+        </figure>
+        <form class="inf">
+            <p class="subtitle">Escribe los datos del triángulo</p>
+            <div>
+                <!-- Primer lado -->
+                <label class="contedor" for="inputTriangulo1">
+                    Lado 1
+                </label>
+                <input  class="contenedor" id="inputTriangulo1" type="number">
+            </div>
+            <div class="input_number">
+                <!-- Segundo lado -->
+                <label for="inputTriangulo2">
+                    Lado 2
+                </label>
+                <input class="contenedor" id="inputTriangulo2" type="number">
+            </div>
+            <div class="input_number">
+                <!-- Tercer lado -->
+                <label for="inputTriangulo3">
+                    Base " 
+                </label>
+                <input class="contenedor"  id="inputTriangulo3" type="number">
+            </div>
+            <div class="input_number">
+                <!-- Cuarto lado -->
+                <label for="inputTriangulo4">
+                    Altura
+                </label>
+                <input class="contenedor" id="inputTriangulo4" type="number">
+            </div>
+            <div class="div-button">
+                <button class="button" type="button" onclick="calcularPerimetroTriangulo()">
+                    perímetro
+                </button>
+                <button class="button" type="button" onclick="calcularAreaTriangulo()">
+                    Area
+                </button>
+            </div>
+        </form>
+        </div>
+        <div class="cuadrado">
+        <h2 class="title">Círculo</h2>
+        <figure>
+            <img class="imagen" src="css/icons8-círculo-64.png">
+        </figure>
+        <form class="inf" >
+            <p class="subtitle">Escribe los datos del círculo</p>
+            <div class="div-input">
+                <label for="inputCirculo">
+                    Radio
+                </label>
+                <input id="inputCirculo" type="number">
+            </div>
+            <div class="div-button">
+                <button type="button" onclick="calcularPerimetroCirculo()">
+                    Perímetro
+                </button>
+                <button type="button" onclick="calcularAreaCirculo()">
+                    Area
+                </button>
+            </div>
+        </form>
+        </div>
+        </section>
+    </main>
+    <script src="figuras.js"></script>
+</body>
+</html>
