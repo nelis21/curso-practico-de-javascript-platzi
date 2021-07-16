@@ -43,6 +43,12 @@ function areaTriangulo (base, altura) {
     return (base * altura) / 2;
 }
 
+function clearInput () {
+    Object.values(
+        document.getElementsByTagName('form')
+    ).map(x => x.reset())
+}
+
 console.groupEnd();
 
 // Aqui interactuamos con el HTML
@@ -53,7 +59,7 @@ function calcularPerimetroCuadrado() {
     const value = input.value;
     const perimetro = perimetroCuadrado(value);
 
-    swal('Resultado','El perimetro es: ' + perimetro + 'cm');
+    swal('Resultado','El perimetro es: ' + perimetro + 'cm').then(clearInput);
 }
 
 function calcularAreaCuadrado() {
@@ -61,7 +67,7 @@ function calcularAreaCuadrado() {
     const value = input.value;
     const area = areaCuadrado(value);
 
-    swal('Resultado','El área es: ' + area + 'cm^2');
+    swal('Resultado','El área es: ' + area + 'cm^2').then(clearInput);
 }
 
 // Circulos
@@ -70,7 +76,7 @@ function calcularPerimetroCirculo() {
     const value = input.value;
     const perimetro = perimetroCirculo(value);
 
-    swal('Resultado','El perimetro es: ' + perimetro + 'cm');
+    swal('Resultado','El perimetro es: ' + perimetro + 'cm').then(clearInput);
 }
 
 function calcularAreaCirculo() {
@@ -78,7 +84,7 @@ function calcularAreaCirculo() {
     const value = input.value;
     const area = areaCirculo(value);
 
-    swal('Resultado','El área es: ' + area + 'cm^2');
+    swal('Resultado','El área es: ' + area + 'cm^2').then(clearInput);
 }
 
 // Triángulos
@@ -89,10 +95,9 @@ function calcularPerimetroTriangulo() {
     const valueLado1 = Number(inputLado1.value);
     const valueLado2 = Number(inputLado2.value);
     const valueBase = Number(inputBase.value);
+    const perimetro = perimetroTriangulo(valueLado1, valueLado2, valueBase);
 
-    const perimetro = perimetroTriangulo(valueLado1,valueLado2,valueBase);
-
-        swal('Resultado','El perimetro es: ' + perimetro + 'cm');
+    swal('Resultado','El perimetro es: ' + perimetro + 'cm').then(clearInput);
 }
 
 function calcularAreaTriangulo() {
@@ -102,5 +107,5 @@ function calcularAreaTriangulo() {
     const valueAltura = inputAltura.value;
     const area = areaTriangulo(valueBase, valueAltura);
 
-    swal('Resultado','El área es: ' + area + 'cm^2');
+    swal('Resultado','El área es: ' + area + 'cm^2').then(clearInput);
 }
